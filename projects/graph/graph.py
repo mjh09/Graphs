@@ -18,6 +18,7 @@ class Graph:
     def add_edge(self, v1, v2):
         """
         Add a directed edge to the graph.
+        If both exits, connect v1 to v2
         """
         if v1 in self.vertices and v2 in self.vertices:
             self.vertices[v1].add(v2)
@@ -28,7 +29,7 @@ class Graph:
         """
         Get all neighbors (edges) of a vertex.
         """
-        pass  # TODO
+        return self.vertices[vertex_id]
 
     def bft(self, starting_vertex):
         """
